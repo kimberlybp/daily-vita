@@ -41,12 +41,12 @@ const MultipleResponseTagQuestion = (props: MultipleResponseTagQuestionProps) =>
       </QuestionDescription>
       <View style={styles.chipContainer}>
         {options.map((opt) => (
-          <CustomChip 
-            key={opt.id} 
+          <CustomChip
+            key={opt.id}
             initialChecked={isChipChecked(opt)}
             onPress={(e, isChecked) => {
-            onToggleChip(opt, isChecked)
-          }}>
+              onToggleChip(opt, isChecked)
+            }}>
             {opt.name}
           </CustomChip>
         ))}

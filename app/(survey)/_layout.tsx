@@ -1,9 +1,9 @@
 import { Colours } from "@/constants/Colours";
+import { RootState } from '@/store/reducers';
 import { Stack } from "expo-router";
 import React from "react";
 import { StyleSheet } from 'react-native';
 import { ProgressBar } from "react-native-paper";
-import { RootState } from '@/store/reducers';
 import { useSelector } from "react-redux";
 
 export default function RootLayout() {

@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     color: Colours.white,
     fontSize: 18,
     fontFamily: 'Poppins SemiBold',
-    width:'auto',
+    width: 'auto',
   },
   containedButton: {
     backgroundColor: Colours.button,

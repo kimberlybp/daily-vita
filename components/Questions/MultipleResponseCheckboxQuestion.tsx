@@ -40,13 +40,13 @@ const MultipleResponseCheckboxQuestion = (props: MultipleResponseCheckboxQuestio
       </QuestionDescription>
       <View style={styles.checkboxesContainer}>
         {options.map((opt) => (
-          <CustomCheckbox 
-            key={opt.id} 
+          <CustomCheckbox
+            key={opt.id}
             text={opt.name}
             isChecked={isCheckboxChecked(opt)}
             onPress={(isChecked) => {
-            onToggleCheckbox(opt, isChecked)
-          }} />
+              onToggleCheckbox(opt, isChecked)
+            }} />
         ))}
       </View>
     </View>

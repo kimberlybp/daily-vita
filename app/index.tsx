@@ -2,7 +2,6 @@ import CustomButton from "@/components/CustomButton";
 import HeaderText from "@/components/HeaderText";
 import SubheaderText from "@/components/SubheaderText";
 import ThemedView from "@/components/ThemedView";
-import { Colours } from '@/constants/Colours';
 import { PROGRESS_PER_PAGE } from "@/constants/Common";
 import NavigationPaths from "@/constants/NavigationPaths";
 import { initialiseSurvey, updateProgressBar } from "@/store/actions.ts/survey";
@@ -49,20 +48,6 @@ const WelcomePage = () => {
 };
 
 const styles = StyleSheet.create({
-  rootText: {
-    color: Colours.text,
-    fontFamily: 'Poppins Regular',
-    fontSize: 18,
-  },
-  titleText: {
-    fontFamily: 'Poppins SemiBold',
-    fontSize: 32,
-    marginBottom: 16,
-  },
-  subheadingText: {
-    fontFamily: 'Poppins SemiBold',
-    fontSize: 20,
-  },
   illustration: {
     height: '50%',
     width: '100%',

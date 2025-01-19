@@ -1,7 +1,7 @@
-import React from "react";
-import { ViewProps, View, StyleSheet, Text, TouchableOpacity, GestureResponderEvent } from "react-native";
-import globalStyles from '@/utils/GlobalStyleSheet';
 import { Colours } from "@/constants/Colours";
+import globalStyles from '@/utils/GlobalStyleSheet';
+import React from "react";
+import { GestureResponderEvent, StyleSheet, Text, TouchableOpacity, View, ViewProps } from "react-native";
 
 export type RadioButtonProps = Omit<ViewProps, 'children'> & {
   children: string
@@ -13,7 +13,7 @@ const RadioButton = (props: RadioButtonProps) => {
   const { selected, style, children, onPress, ...rest } = props
   return (
     <View {...rest}>
-      <TouchableOpacity style={styles.root}  onPress={onPress}>
+      <TouchableOpacity style={styles.root} onPress={onPress}>
         <View style={[styles.outer, style]}>
           {selected ? <View style={styles.inner} /> : null}
         </View>

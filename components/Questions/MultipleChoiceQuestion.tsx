@@ -3,7 +3,6 @@ import { getQuestionResponse } from '@/store/selectors/survey';
 import { Option, Question } from '@/store/types/survey';
 import React from "react";
 import { StyleSheet, View, ViewProps } from 'react-native';
-import CustomCheckbox from '../CustomCheckbox';
 import QuestionDescription from '../QuestionDescription';
 import RadioButton from '../RadioButton';
 

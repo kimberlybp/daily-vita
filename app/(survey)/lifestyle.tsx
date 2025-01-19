@@ -15,20 +15,20 @@ import { useDispatch } from "react-redux";
 const LifestyleView = () => {
   const dispatch = useDispatch()
 
-  const questionOne = useSelect(getQuestionByLabel(DAILY_EXPOSURE_LABEL))
-  const responseOne = useSelect(getQuestionResponse(DAILY_EXPOSURE_LABEL))
+  const dailyExposureQuestion = useSelect(getQuestionByLabel(DAILY_EXPOSURE_LABEL))
+  const dailyExposureResponse = useSelect(getQuestionResponse(DAILY_EXPOSURE_LABEL))
 
-  const questionTwo = useSelect(getQuestionByLabel(SMOKE_LABEL))
+  const smokeQuestion = useSelect(getQuestionByLabel(SMOKE_LABEL))
   const responseTwo = useSelect(getQuestionResponse(SMOKE_LABEL))
 
-  const questionThree = useSelect(getQuestionByLabel(ALCOHOL_LABEL))
-  const responseThree = useSelect(getQuestionResponse(ALCOHOL_LABEL))
+  const alcoholQuestion = useSelect(getQuestionByLabel(ALCOHOL_LABEL))
+  const alcoholResponse = useSelect(getQuestionResponse(ALCOHOL_LABEL))
 
   const isNextDisabled: boolean = useMemo(() => {
-    return !responseOne || !responseTwo || !responseThree
-  }, [responseOne, responseTwo, responseThree])
+    return !dailyExposureResponse || !responseTwo || !alcoholResponse
+  }, [dailyExposureResponse, responseTwo, alcoholResponse])
 
-  if (!questionOne || !questionTwo || !questionThree) {
+  if (!dailyExposureQuestion || !smokeQuestion || !alcoholQuestion) {
     return null
   }
 
@@ -45,15 +45,15 @@ const LifestyleView = () => {
   return (
     <ThemedView>
       <MultipleChoiceQuestion
-        question={questionOne}
+        question={dailyExposureQuestion}
         options={TRUE_FALSE_OPTIONS}
         responseCallback={(selectedOption) => onRespond(selectedOption, DAILY_EXPOSURE_LABEL)} />
       <MultipleChoiceQuestion
-        question={questionTwo}
+        question={smokeQuestion}
         options={TRUE_FALSE_OPTIONS}
         responseCallback={(selectedOption) => onRespond(selectedOption, SMOKE_LABEL)} />
       <MultipleChoiceQuestion
-        question={questionThree}
+        question={alcoholQuestion}
         options={RANGE_OPTIONS}
         responseCallback={(selectedOption) => onRespond(selectedOption, ALCOHOL_LABEL)} />
       <Link href={NavigationPaths.SURVEY.COMPLETE} disabled={isNextDisabled} onPress={onSubmit} asChild>

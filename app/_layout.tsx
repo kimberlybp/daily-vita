@@ -1,11 +1,10 @@
-import React from "react"
+import store from "@/store"
 import { useFonts } from "expo-font"
 import { Stack } from "expo-router"
 import * as SplashScreen from 'expo-splash-screen'
-import { useEffect } from 'react'
+import React, { useEffect } from "react"
+import { PaperProvider } from 'react-native-paper'
 import { Provider } from "react-redux"
-import { PaperProvider } from 'react-native-paper';
-import store from "@/store"
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({

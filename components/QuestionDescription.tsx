@@ -1,7 +1,7 @@
 import globalStyles from '@/utils/GlobalStyleSheet';
 import { CommonTextProps } from '@/utils/GlobalTypes';
 import React from "react";
-import { StyleSheet, Text, TextProps } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 
 export type QuestionDescriptionProps = CommonTextProps & {
   additionalInfo?: string
