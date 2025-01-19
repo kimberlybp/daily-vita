@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "label": "health_concerns",
+      "description": "Select the top health concerns.",
+      "additional_info": "(up to 5)",
+      "type": "multiple-response-tag",
+      "is_required": true,
+      "is_subquestion": false
+    },
+    {
+      "id": 2,
+      "label": "health_concerns",
+      "description": "Prioritize",
+      "type": "ranking",
+      "is_required": true,
+      "is_subquestion": true  
+    },
+    {
+      "id": 3,
+      "label": "diets",
+      "description": "Select the diets you follow.",
+      "type": "multiple-response-checkbox",
+      "is_required": true,
+      "is_subquestion": false
+    },
+    {
+      "id": 4,
+      "label": "allergies",
+      "description": "Write any specific allergies or sensitivity towards specific things.",
+      "type": "multiple-select",
+      "is_required": false,
+      "is_subquestion": false
+    },
+    {
+      "id": 5,
+      "label": "is_daily_exposure",
+      "description": "Is your daily exposure to sun is limited?",
+      "type": "yes-or-no",
+      "is_required": true,
+      "is_subquestion": false
+    },
+    {
+      "id": 6,
+      "label": "is_smoke",
+      "description": "Do you currently smoke (tobacco or marijuana)?",
+      "type": "yes-or-no",
+      "is_required": true,
+      "is_subquestion": false
+    },
+    {
+      "id": 7,
+      "label": "alcohol",
+      "description": "On average, how many alcoholic beverages do you have in a week?",
+      "type": "multiple-choice",
+      "is_required": true,
+      "is_subquestion": false
+    }
+  ]
+}
