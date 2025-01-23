@@ -1,11 +1,10 @@
-import { applyMiddleware, createStore } from 'redux'
-import rootReducer from './reducers'
+import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-expo-dev-plugin';
 import createSagaMiddleware from 'redux-saga';
+import rootReducer from './reducers';
 import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware()
-const middlewares = [sagaMiddleware]
 const store = createStore(
   rootReducer,
   // @ts-ignore
